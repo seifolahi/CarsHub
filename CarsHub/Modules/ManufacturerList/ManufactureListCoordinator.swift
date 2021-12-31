@@ -19,11 +19,16 @@ struct ManufactureListCoordinator: Coordinator {
     func start() {
         let manufacturerListVC = ManufacturerListVC()
         manufacturerListVC.coordinator = self
-        manufacturerListVC.viewModel = ManufactureListViewModel(serviceLauncher: Dependencies.networkServiceLauncher)
-        navigationController.pushViewController(manufacturerListVC, animated: false)
+        manufacturerListVC.viewModel = ManufacturerListViewModel(
+            serviceLauncher: Dependencies.networkServiceLauncher,
+            service: ManufactureService())
+        navigationController.pushViewController(manufacturerListVC, animated: true)
     }
     
-    func goToNextPage() {
-        
+    func goToNextPage(manufacturerID: String, manufacturerName: String) {
+        let coordinator = CarModelCoordinator(navigation: navigationController,
+                                              manufacturerID: manufacturerID,
+                                              manufacturerName: manufacturerName)
+        coordinator.start()
     }
 }

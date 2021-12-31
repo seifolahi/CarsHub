@@ -1,5 +1,5 @@
 //
-//  ManufactureListViewModel.swift
+//  MultiPageListViewModel.swift
 //  CarsHub
 //
 //  Created by Hamid reza Seifolahi on 12/31/21.
@@ -12,7 +12,7 @@ enum ListState {
     case idle, loading, error, gotNewPage, gotLastPage
 }
 
-class ManufactureListViewModel: BaseViewModel {
+class MultiPageListViewModel<T: ServiceRouter>: BaseViewModel {
     
     let itemsState = CurrentValueSubject<ListState, Error>(.idle)
     var items: [String] = []
@@ -22,7 +22,14 @@ class ManufactureListViewModel: BaseViewModel {
     private var lastLoadedPage: Int = -1
     private var pageSize = 10
     
-    private var itemsDict: [String: String]?
+    var itemsDict: [String: String] = [:]
+    
+    private var service: T!
+    
+    init(serviceLauncher: ServiceLauncherProtocol, service: T) {
+        super.init(serviceLauncher: serviceLauncher)
+        self.service = service
+    }
     
     func buildCellViewModel(for index: Int) -> SimpleTableViewCellViewModel {
         let rowTitle = items[index]
@@ -35,8 +42,7 @@ class ManufactureListViewModel: BaseViewModel {
             return
         }
         
-        let pageConf = ServicePagination(pageSize: pageSize, page: lastLoadedPage + 1)
-        let service = ManufactureService(pagination: pageConf)
+        service.pagination = ServicePagination(pageSize: pageSize, page: lastLoadedPage + 1)
         
         itemsState.send(.loading)
         
@@ -56,9 +62,12 @@ class ManufactureListViewModel: BaseViewModel {
 
     }
     
-    private func updateData(model: ManufactureServerModel) {
+    private func updateData(model: T.ResponseType) {
+        
+        guard let model = model as? MultiPageListModel else { return }
+        
         lastLoadedPage = model.page
-        itemsDict?.merge(model.wkda) { (_, new) in new }
+        itemsDict.merge(model.wkda) { (_, new) in new }
         
         items.append(contentsOf: model.wkda.values)
         

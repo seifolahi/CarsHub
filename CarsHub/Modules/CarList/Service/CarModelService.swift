@@ -1,5 +1,5 @@
 //
-//  ManufactureService.swift
+//  CarModelService.swift
 //  CarsHub
 //
 //  Created by Hamid reza Seifolahi on 12/31/21.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct ManufactureService: ServiceRouter {
+struct CarModelService: ServiceRouter {
     
     var pagination: ServicePagination?
     var urlParams: [String : String]?
@@ -17,7 +17,7 @@ struct ManufactureService: ServiceRouter {
     }
     
     var path: String {
-        return "v1/car-types/manufacturer"
+        return "v1/car-types/main-types"
     }
     
     typealias ResponseType = MultiPageListModel

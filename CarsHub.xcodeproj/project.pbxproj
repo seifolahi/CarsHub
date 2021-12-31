@@ -14,11 +14,11 @@
 		DCDB944B277EF83600AD2864 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCDB9449277EF83600AD2864 /* LaunchScreen.storyboard */; };
 		DCDB9456277EF83600AD2864 /* SimpleTableViewCellViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDB9455277EF83600AD2864 /* SimpleTableViewCellViewModelTests.swift */; };
 		DCDB9471277F0E7600AD2864 /* ManufactureListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDB9470277F0E7600AD2864 /* ManufactureListCoordinator.swift */; };
-		DCDB9473277F107300AD2864 /* ManufactureListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDB9472277F107300AD2864 /* ManufactureListViewModel.swift */; };
+		DCDB9473277F107300AD2864 /* MultiPageListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDB9472277F107300AD2864 /* MultiPageListViewModel.swift */; };
 		DCDB9476277F11B800AD2864 /* RootCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDB9475277F11B800AD2864 /* RootCoordinator.swift */; };
 		DCDB9478277F11CA00AD2864 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDB9477277F11CA00AD2864 /* Coordinator.swift */; };
 		DCDB9480277F450500AD2864 /* ServiceRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDB947F277F450500AD2864 /* ServiceRouter.swift */; };
-		DCDB9483277F45F000AD2864 /* ManufactureModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDB9482277F45F000AD2864 /* ManufactureModel.swift */; };
+		DCDB9483277F45F000AD2864 /* MultiPageListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDB9482277F45F000AD2864 /* MultiPageListModel.swift */; };
 		DCDB9485277F45FA00AD2864 /* ManufactureService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDB9484277F45FA00AD2864 /* ManufactureService.swift */; };
 		DCDB9488277F4F2300AD2864 /* SimpleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDB9487277F4F2300AD2864 /* SimpleTableViewCell.swift */; };
 		DCDB948A277F4FAC00AD2864 /* SimpleTableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDB9489277F4FAC00AD2864 /* SimpleTableViewCellViewModel.swift */; };
@@ -31,6 +31,11 @@
 		DCDB949D277FA2BE00AD2864 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDB949C277FA2BE00AD2864 /* BaseViewModel.swift */; };
 		DCDB949F277FA31C00AD2864 /* ManufactureViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDB949E277FA31C00AD2864 /* ManufactureViewModelTest.swift */; };
 		DCDB94A3277FA40B00AD2864 /* MockServiceLauncher.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDB94A2277FA40B00AD2864 /* MockServiceLauncher.swift */; };
+		DCDB94A9277FB49C00AD2864 /* CarModelService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDB94A8277FB49C00AD2864 /* CarModelService.swift */; };
+		DCDB94AE277FB55700AD2864 /* CarModelCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDB94AD277FB55700AD2864 /* CarModelCoordinator.swift */; };
+		DCDB94B0277FB8B800AD2864 /* CarModelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDB94AF277FB8B800AD2864 /* CarModelVC.swift */; };
+		DCDB94B3277FBE3B00AD2864 /* ManufacturerListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDB94B2277FBE3B00AD2864 /* ManufacturerListViewModel.swift */; };
+		DCDB94B5277FBEB900AD2864 /* CarModelViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDB94B4277FBEB900AD2864 /* CarModelViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,11 +59,11 @@
 		DCDB9451277EF83600AD2864 /* CarsHubTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CarsHubTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCDB9455277EF83600AD2864 /* SimpleTableViewCellViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleTableViewCellViewModelTests.swift; sourceTree = "<group>"; };
 		DCDB9470277F0E7600AD2864 /* ManufactureListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManufactureListCoordinator.swift; sourceTree = "<group>"; };
-		DCDB9472277F107300AD2864 /* ManufactureListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManufactureListViewModel.swift; sourceTree = "<group>"; };
+		DCDB9472277F107300AD2864 /* MultiPageListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiPageListViewModel.swift; sourceTree = "<group>"; };
 		DCDB9475277F11B800AD2864 /* RootCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootCoordinator.swift; sourceTree = "<group>"; };
 		DCDB9477277F11CA00AD2864 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		DCDB947F277F450500AD2864 /* ServiceRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceRouter.swift; sourceTree = "<group>"; };
-		DCDB9482277F45F000AD2864 /* ManufactureModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManufactureModel.swift; sourceTree = "<group>"; };
+		DCDB9482277F45F000AD2864 /* MultiPageListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiPageListModel.swift; sourceTree = "<group>"; };
 		DCDB9484277F45FA00AD2864 /* ManufactureService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManufactureService.swift; sourceTree = "<group>"; };
 		DCDB9487277F4F2300AD2864 /* SimpleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleTableViewCell.swift; sourceTree = "<group>"; };
 		DCDB9489277F4FAC00AD2864 /* SimpleTableViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleTableViewCellViewModel.swift; sourceTree = "<group>"; };
@@ -71,6 +76,11 @@
 		DCDB949C277FA2BE00AD2864 /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
 		DCDB949E277FA31C00AD2864 /* ManufactureViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManufactureViewModelTest.swift; sourceTree = "<group>"; };
 		DCDB94A2277FA40B00AD2864 /* MockServiceLauncher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockServiceLauncher.swift; sourceTree = "<group>"; };
+		DCDB94A8277FB49C00AD2864 /* CarModelService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarModelService.swift; sourceTree = "<group>"; };
+		DCDB94AD277FB55700AD2864 /* CarModelCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarModelCoordinator.swift; sourceTree = "<group>"; };
+		DCDB94AF277FB8B800AD2864 /* CarModelVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarModelVC.swift; sourceTree = "<group>"; };
+		DCDB94B2277FBE3B00AD2864 /* ManufacturerListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManufacturerListViewModel.swift; sourceTree = "<group>"; };
+		DCDB94B4277FBEB900AD2864 /* CarModelViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarModelViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,7 +145,9 @@
 		DCDB946E277F0E0300AD2864 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				DCDB94B1277FBD3100AD2864 /* MultiPageList */,
 				DCDB946F277F0E0D00AD2864 /* ManufacturerList */,
+				DCDB94A7277FB46600AD2864 /* CarList */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -146,9 +158,8 @@
 				DCDB9486277F4EE000AD2864 /* CustomViews */,
 				DCDB9481277F459900AD2864 /* Service */,
 				DCDB9442277EF83300AD2864 /* ManufacturerListVC.swift */,
+				DCDB94B2277FBE3B00AD2864 /* ManufacturerListViewModel.swift */,
 				DCDB9470277F0E7600AD2864 /* ManufactureListCoordinator.swift */,
-				DCDB9472277F107300AD2864 /* ManufactureListViewModel.swift */,
-				DCDB9482277F45F000AD2864 /* ManufactureModel.swift */,
 			);
 			path = ManufacturerList;
 			sourceTree = "<group>";
@@ -268,6 +279,34 @@
 			path = Mocks;
 			sourceTree = "<group>";
 		};
+		DCDB94A7277FB46600AD2864 /* CarList */ = {
+			isa = PBXGroup;
+			children = (
+				DCDB94AA277FB4A400AD2864 /* Service */,
+				DCDB94AF277FB8B800AD2864 /* CarModelVC.swift */,
+				DCDB94B4277FBEB900AD2864 /* CarModelViewModel.swift */,
+				DCDB94AD277FB55700AD2864 /* CarModelCoordinator.swift */,
+			);
+			path = CarList;
+			sourceTree = "<group>";
+		};
+		DCDB94AA277FB4A400AD2864 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				DCDB94A8277FB49C00AD2864 /* CarModelService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		DCDB94B1277FBD3100AD2864 /* MultiPageList */ = {
+			isa = PBXGroup;
+			children = (
+				DCDB9472277F107300AD2864 /* MultiPageListViewModel.swift */,
+				DCDB9482277F45F000AD2864 /* MultiPageListModel.swift */,
+			);
+			path = MultiPageList;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -371,20 +410,25 @@
 				DCDB948F277F63B800AD2864 /* Dependencies.swift in Sources */,
 				DCDB9480277F450500AD2864 /* ServiceRouter.swift in Sources */,
 				DCDB9471277F0E7600AD2864 /* ManufactureListCoordinator.swift in Sources */,
-				DCDB9473277F107300AD2864 /* ManufactureListViewModel.swift in Sources */,
+				DCDB9473277F107300AD2864 /* MultiPageListViewModel.swift in Sources */,
 				DCDB9494277F9ACC00AD2864 /* UIViewControllerExtensions.swift in Sources */,
 				DCDB949D277FA2BE00AD2864 /* BaseViewModel.swift in Sources */,
+				DCDB94A9277FB49C00AD2864 /* CarModelService.swift in Sources */,
 				DCDB9488277F4F2300AD2864 /* SimpleTableViewCell.swift in Sources */,
 				DCDB948C277F556200AD2864 /* ServiceLauncher.swift in Sources */,
 				DCDB9485277F45FA00AD2864 /* ManufactureService.swift in Sources */,
+				DCDB94AE277FB55700AD2864 /* CarModelCoordinator.swift in Sources */,
 				DCDB9443277EF83300AD2864 /* ManufacturerListVC.swift in Sources */,
 				DCDB943F277EF83300AD2864 /* AppDelegate.swift in Sources */,
 				DCDB9476277F11B800AD2864 /* RootCoordinator.swift in Sources */,
-				DCDB9483277F45F000AD2864 /* ManufactureModel.swift in Sources */,
+				DCDB9483277F45F000AD2864 /* MultiPageListModel.swift in Sources */,
 				DCDB9492277F955C00AD2864 /* TableViewExtensions.swift in Sources */,
 				DCDB9478277F11CA00AD2864 /* Coordinator.swift in Sources */,
 				DCDB9499277FA0B300AD2864 /* UIViewExtensions.swift in Sources */,
+				DCDB94B0277FB8B800AD2864 /* CarModelVC.swift in Sources */,
 				DCDB948A277F4FAC00AD2864 /* SimpleTableViewCellViewModel.swift in Sources */,
+				DCDB94B3277FBE3B00AD2864 /* ManufacturerListViewModel.swift in Sources */,
+				DCDB94B5277FBEB900AD2864 /* CarModelViewModel.swift in Sources */,
 				DCDB9441277EF83300AD2864 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

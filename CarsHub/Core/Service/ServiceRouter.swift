@@ -14,7 +14,7 @@ public enum HTTPMethod: String, Encodable {
 
 protocol ServiceRouter {
     
-    associatedtype ResponseType: Codable
+    associatedtype ResponseType: Decodable
     var method: HTTPMethod { get }
     var path: String { get }
     

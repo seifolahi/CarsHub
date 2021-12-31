@@ -1,5 +1,5 @@
 //
-//  ManufacturerListVC.swift
+//  CarModelVC.swift
 //  CarsHub
 //
 //  Created by Hamid reza Seifolahi on 12/31/21.
@@ -8,13 +8,15 @@
 import UIKit
 import Combine
 
-class ManufacturerListVC: UIViewController {
+class CarModelVC: UIViewController {
     
-    var coordinator: ManufactureListCoordinator?
-    var viewModel: ManufacturerListViewModel!
+    var coordinator: CarModelCoordinator?
+    var viewModel: CarModelViewModel!
     
     private var tableView: UITableView!
     private var disposeBag = Set<AnyCancellable>()
+    
+    var selectedManufacturer = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,7 +30,7 @@ class ManufacturerListVC: UIViewController {
     }
     
     func setupVC() {
-        title = "CarsHub©"
+        title = "Car Models"
     }
     
     func setupTableView() {
@@ -63,17 +65,15 @@ class ManufacturerListVC: UIViewController {
     }
 }
 
-extension ManufacturerListVC: UITableViewDelegate {
+extension CarModelVC: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if let manufacturerID = viewModel.findKeyFor(index: indexPath.row) {
-            let manufacturerName = viewModel.items[indexPath.row]
-            coordinator?.goToNextPage(manufacturerID: manufacturerID, manufacturerName: manufacturerName)
-        }
+        let modelName = viewModel.items[indexPath.row]
+        showSimpleAlert(title: "Done", message: "\(selectedManufacturer), \(modelName)")
     }
 }
 
-extension ManufacturerListVC: UITableViewDataSource {
+extension CarModelVC: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel.items.count
     }

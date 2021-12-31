@@ -10,7 +10,7 @@ import UIKit
 class Dependencies {
     
     static var networkServiceLauncher: ServiceLauncherProtocol {
-        let baseURL = "http://api-aws-eu-qa-1.auto1-test.com/"
+        let baseURL = "http://api-aws-eu-qa-1.auto\(1)-test.com/"
         let token = "coding-puzzle-client-449cc9d"
         return ServiceLauncher(baseURL: baseURL, token: token)
     }

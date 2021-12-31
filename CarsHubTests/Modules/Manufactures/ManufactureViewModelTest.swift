@@ -12,13 +12,13 @@ import Combine
 class ManufactureViewModelTest: XCTestCase {
     
     var mockServiceLauncher: MockServiceLauncher!
-    var sut: ManufactureListViewModel!
+    var sut: MultiPageListViewModel<ManufactureService>!
     
     private var bag = Set<AnyCancellable>()
 
     override func setUpWithError() throws {
         mockServiceLauncher = MockServiceLauncher(baseURL: "http://somthing.com", token: "123")
-        sut = ManufactureListViewModel(serviceLauncher: mockServiceLauncher)
+        sut = MultiPageListViewModel(serviceLauncher: mockServiceLauncher, service: ManufactureService())
     }
 
     func testLoadFirstPage() throws {
@@ -105,7 +105,7 @@ class ManufactureViewModelTest: XCTestCase {
         wait(for: [stateExpectation], timeout: 1.0)
     }
     
-    func generateNextPageTestData(page: Int, resultInPage: Int ,total: Int) -> ManufactureServerModel {
+    func generateNextPageTestData(page: Int, resultInPage: Int ,total: Int) -> MultiPageListModel {
         
         let pageSize = 10
         
@@ -119,10 +119,10 @@ class ManufactureViewModelTest: XCTestCase {
         
         let wkda = Dictionary(uniqueKeysWithValues: zip(keys, values))
         
-        let model = ManufactureServerModel(page: page,
-                                           pageSize: pageSize,
-                                           totalPageCount: Int(ceil(Double(total) / 10.0)),
-                                           wkda: wkda)
+        let model = MultiPageListModel(page: page,
+                                       pageSize: pageSize,
+                                       totalPageCount: Int(ceil(Double(total) / 10.0)),
+                                       wkda: wkda)
         
         
         return model
