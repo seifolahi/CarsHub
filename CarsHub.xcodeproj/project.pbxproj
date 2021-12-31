@@ -12,11 +12,17 @@
 		DCDB9443277EF83300AD2864 /* ManufacturerListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDB9442277EF83300AD2864 /* ManufacturerListVC.swift */; };
 		DCDB9448277EF83600AD2864 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DCDB9447277EF83600AD2864 /* Assets.xcassets */; };
 		DCDB944B277EF83600AD2864 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCDB9449277EF83600AD2864 /* LaunchScreen.storyboard */; };
-		DCDB9456277EF83600AD2864 /* CarsHubTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDB9455277EF83600AD2864 /* CarsHubTests.swift */; };
+		DCDB9456277EF83600AD2864 /* SimpleTableViewCellViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDB9455277EF83600AD2864 /* SimpleTableViewCellViewModelTests.swift */; };
 		DCDB9471277F0E7600AD2864 /* ManufactureListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDB9470277F0E7600AD2864 /* ManufactureListCoordinator.swift */; };
 		DCDB9473277F107300AD2864 /* ManufactureListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDB9472277F107300AD2864 /* ManufactureListViewModel.swift */; };
 		DCDB9476277F11B800AD2864 /* RootCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDB9475277F11B800AD2864 /* RootCoordinator.swift */; };
 		DCDB9478277F11CA00AD2864 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDB9477277F11CA00AD2864 /* Coordinator.swift */; };
+		DCDB9480277F450500AD2864 /* ServiceRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDB947F277F450500AD2864 /* ServiceRouter.swift */; };
+		DCDB9483277F45F000AD2864 /* ManufactureModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDB9482277F45F000AD2864 /* ManufactureModel.swift */; };
+		DCDB9485277F45FA00AD2864 /* ManufactureService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDB9484277F45FA00AD2864 /* ManufactureService.swift */; };
+		DCDB9488277F4F2300AD2864 /* SimpleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDB9487277F4F2300AD2864 /* SimpleTableViewCell.swift */; };
+		DCDB948A277F4FAC00AD2864 /* SimpleTableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDB9489277F4FAC00AD2864 /* SimpleTableViewCellViewModel.swift */; };
+		DCDB948C277F556200AD2864 /* ServiceLauncher.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDB948B277F556200AD2864 /* ServiceLauncher.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,11 +44,17 @@
 		DCDB944A277EF83600AD2864 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DCDB944C277EF83600AD2864 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DCDB9451277EF83600AD2864 /* CarsHubTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CarsHubTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		DCDB9455277EF83600AD2864 /* CarsHubTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarsHubTests.swift; sourceTree = "<group>"; };
+		DCDB9455277EF83600AD2864 /* SimpleTableViewCellViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleTableViewCellViewModelTests.swift; sourceTree = "<group>"; };
 		DCDB9470277F0E7600AD2864 /* ManufactureListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManufactureListCoordinator.swift; sourceTree = "<group>"; };
 		DCDB9472277F107300AD2864 /* ManufactureListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManufactureListViewModel.swift; sourceTree = "<group>"; };
 		DCDB9475277F11B800AD2864 /* RootCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootCoordinator.swift; sourceTree = "<group>"; };
 		DCDB9477277F11CA00AD2864 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		DCDB947F277F450500AD2864 /* ServiceRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceRouter.swift; sourceTree = "<group>"; };
+		DCDB9482277F45F000AD2864 /* ManufactureModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManufactureModel.swift; sourceTree = "<group>"; };
+		DCDB9484277F45FA00AD2864 /* ManufactureService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManufactureService.swift; sourceTree = "<group>"; };
+		DCDB9487277F4F2300AD2864 /* SimpleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleTableViewCell.swift; sourceTree = "<group>"; };
+		DCDB9489277F4FAC00AD2864 /* SimpleTableViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleTableViewCellViewModel.swift; sourceTree = "<group>"; };
+		DCDB948B277F556200AD2864 /* ServiceLauncher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceLauncher.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,7 +108,7 @@
 		DCDB9454277EF83600AD2864 /* CarsHubTests */ = {
 			isa = PBXGroup;
 			children = (
-				DCDB9455277EF83600AD2864 /* CarsHubTests.swift */,
+				DCDB9455277EF83600AD2864 /* SimpleTableViewCellViewModelTests.swift */,
 			);
 			path = CarsHubTests;
 			sourceTree = "<group>";
@@ -112,9 +124,12 @@
 		DCDB946F277F0E0D00AD2864 /* ManufacturerList */ = {
 			isa = PBXGroup;
 			children = (
+				DCDB9486277F4EE000AD2864 /* CustomViews */,
+				DCDB9481277F459900AD2864 /* Service */,
 				DCDB9442277EF83300AD2864 /* ManufacturerListVC.swift */,
 				DCDB9470277F0E7600AD2864 /* ManufactureListCoordinator.swift */,
 				DCDB9472277F107300AD2864 /* ManufactureListViewModel.swift */,
+				DCDB9482277F45F000AD2864 /* ManufactureModel.swift */,
 			);
 			path = ManufacturerList;
 			sourceTree = "<group>";
@@ -122,6 +137,7 @@
 		DCDB9474277F110A00AD2864 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				DCDB947E277F21A300AD2864 /* Service */,
 				DCDB9479277F11D700AD2864 /* Coordinator */,
 				DCDB943E277EF83300AD2864 /* AppDelegate.swift */,
 				DCDB9440277EF83300AD2864 /* SceneDelegate.swift */,
@@ -136,6 +152,32 @@
 				DCDB9475277F11B800AD2864 /* RootCoordinator.swift */,
 			);
 			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		DCDB947E277F21A300AD2864 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				DCDB947F277F450500AD2864 /* ServiceRouter.swift */,
+				DCDB948B277F556200AD2864 /* ServiceLauncher.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		DCDB9481277F459900AD2864 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				DCDB9484277F45FA00AD2864 /* ManufactureService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		DCDB9486277F4EE000AD2864 /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				DCDB9487277F4F2300AD2864 /* SimpleTableViewCell.swift */,
+				DCDB9489277F4FAC00AD2864 /* SimpleTableViewCellViewModel.swift */,
+			);
+			path = CustomViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -238,12 +280,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCDB9480277F450500AD2864 /* ServiceRouter.swift in Sources */,
 				DCDB9471277F0E7600AD2864 /* ManufactureListCoordinator.swift in Sources */,
 				DCDB9473277F107300AD2864 /* ManufactureListViewModel.swift in Sources */,
+				DCDB9488277F4F2300AD2864 /* SimpleTableViewCell.swift in Sources */,
+				DCDB948C277F556200AD2864 /* ServiceLauncher.swift in Sources */,
+				DCDB9485277F45FA00AD2864 /* ManufactureService.swift in Sources */,
 				DCDB9443277EF83300AD2864 /* ManufacturerListVC.swift in Sources */,
 				DCDB943F277EF83300AD2864 /* AppDelegate.swift in Sources */,
 				DCDB9476277F11B800AD2864 /* RootCoordinator.swift in Sources */,
+				DCDB9483277F45F000AD2864 /* ManufactureModel.swift in Sources */,
 				DCDB9478277F11CA00AD2864 /* Coordinator.swift in Sources */,
+				DCDB948A277F4FAC00AD2864 /* SimpleTableViewCellViewModel.swift in Sources */,
 				DCDB9441277EF83300AD2864 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -252,7 +300,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DCDB9456277EF83600AD2864 /* CarsHubTests.swift in Sources */,
+				DCDB9456277EF83600AD2864 /* SimpleTableViewCellViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -408,6 +456,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -435,6 +484,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -457,7 +507,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = JSLM23YG4T;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -482,7 +532,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = JSLM23YG4T;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

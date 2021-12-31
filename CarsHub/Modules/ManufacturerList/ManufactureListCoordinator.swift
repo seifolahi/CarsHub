@@ -19,6 +19,7 @@ struct ManufactureListCoordinator: Coordinator {
     func start() {
         let manufacturerListVC = ManufacturerListVC()
         manufacturerListVC.coordinator = self
+        manufacturerListVC.viewModel = ManufactureListViewModel()
         navigationController.pushViewController(manufacturerListVC, animated: false)
     }
     
