@@ -23,6 +23,14 @@
 		DCDB9488277F4F2300AD2864 /* SimpleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDB9487277F4F2300AD2864 /* SimpleTableViewCell.swift */; };
 		DCDB948A277F4FAC00AD2864 /* SimpleTableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDB9489277F4FAC00AD2864 /* SimpleTableViewCellViewModel.swift */; };
 		DCDB948C277F556200AD2864 /* ServiceLauncher.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDB948B277F556200AD2864 /* ServiceLauncher.swift */; };
+		DCDB948F277F63B800AD2864 /* Dependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDB948E277F63B800AD2864 /* Dependencies.swift */; };
+		DCDB9492277F955C00AD2864 /* TableViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDB9491277F955C00AD2864 /* TableViewExtensions.swift */; };
+		DCDB9494277F9ACC00AD2864 /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDB9493277F9ACC00AD2864 /* UIViewControllerExtensions.swift */; };
+		DCDB9497277F9C1E00AD2864 /* ServiceRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDB9496277F9C1E00AD2864 /* ServiceRouterTests.swift */; };
+		DCDB9499277FA0B300AD2864 /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDB9498277FA0B300AD2864 /* UIViewExtensions.swift */; };
+		DCDB949D277FA2BE00AD2864 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDB949C277FA2BE00AD2864 /* BaseViewModel.swift */; };
+		DCDB949F277FA31C00AD2864 /* ManufactureViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDB949E277FA31C00AD2864 /* ManufactureViewModelTest.swift */; };
+		DCDB94A3277FA40B00AD2864 /* MockServiceLauncher.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDB94A2277FA40B00AD2864 /* MockServiceLauncher.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +63,14 @@
 		DCDB9487277F4F2300AD2864 /* SimpleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleTableViewCell.swift; sourceTree = "<group>"; };
 		DCDB9489277F4FAC00AD2864 /* SimpleTableViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleTableViewCellViewModel.swift; sourceTree = "<group>"; };
 		DCDB948B277F556200AD2864 /* ServiceLauncher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceLauncher.swift; sourceTree = "<group>"; };
+		DCDB948E277F63B800AD2864 /* Dependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dependencies.swift; sourceTree = "<group>"; };
+		DCDB9491277F955C00AD2864 /* TableViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewExtensions.swift; sourceTree = "<group>"; };
+		DCDB9493277F9ACC00AD2864 /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
+		DCDB9496277F9C1E00AD2864 /* ServiceRouterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceRouterTests.swift; sourceTree = "<group>"; };
+		DCDB9498277FA0B300AD2864 /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
+		DCDB949C277FA2BE00AD2864 /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
+		DCDB949E277FA31C00AD2864 /* ManufactureViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManufactureViewModelTest.swift; sourceTree = "<group>"; };
+		DCDB94A2277FA40B00AD2864 /* MockServiceLauncher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockServiceLauncher.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,7 +124,10 @@
 		DCDB9454277EF83600AD2864 /* CarsHubTests */ = {
 			isa = PBXGroup;
 			children = (
-				DCDB9455277EF83600AD2864 /* SimpleTableViewCellViewModelTests.swift */,
+				DCDB94A5277FA4AF00AD2864 /* CommonLogics */,
+				DCDB94A6277FA4CE00AD2864 /* Mocks */,
+				DCDB94A0277FA32000AD2864 /* Modules */,
+				DCDB9495277F9C0400AD2864 /* Service */,
 			);
 			path = CarsHubTests;
 			sourceTree = "<group>";
@@ -137,6 +156,9 @@
 		DCDB9474277F110A00AD2864 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				DCDB949A277FA2A900AD2864 /* Base Classes */,
+				DCDB9490277F954800AD2864 /* Extensions */,
+				DCDB948D277F639B00AD2864 /* DI */,
 				DCDB947E277F21A300AD2864 /* Service */,
 				DCDB9479277F11D700AD2864 /* Coordinator */,
 				DCDB943E277EF83300AD2864 /* AppDelegate.swift */,
@@ -178,6 +200,72 @@
 				DCDB9489277F4FAC00AD2864 /* SimpleTableViewCellViewModel.swift */,
 			);
 			path = CustomViews;
+			sourceTree = "<group>";
+		};
+		DCDB948D277F639B00AD2864 /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				DCDB948E277F63B800AD2864 /* Dependencies.swift */,
+			);
+			path = DI;
+			sourceTree = "<group>";
+		};
+		DCDB9490277F954800AD2864 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				DCDB9491277F955C00AD2864 /* TableViewExtensions.swift */,
+				DCDB9498277FA0B300AD2864 /* UIViewExtensions.swift */,
+				DCDB9493277F9ACC00AD2864 /* UIViewControllerExtensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		DCDB9495277F9C0400AD2864 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				DCDB9496277F9C1E00AD2864 /* ServiceRouterTests.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		DCDB949A277FA2A900AD2864 /* Base Classes */ = {
+			isa = PBXGroup;
+			children = (
+				DCDB949C277FA2BE00AD2864 /* BaseViewModel.swift */,
+			);
+			path = "Base Classes";
+			sourceTree = "<group>";
+		};
+		DCDB94A0277FA32000AD2864 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				DCDB94A1277FA32C00AD2864 /* Manufactures */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		DCDB94A1277FA32C00AD2864 /* Manufactures */ = {
+			isa = PBXGroup;
+			children = (
+				DCDB949E277FA31C00AD2864 /* ManufactureViewModelTest.swift */,
+			);
+			path = Manufactures;
+			sourceTree = "<group>";
+		};
+		DCDB94A5277FA4AF00AD2864 /* CommonLogics */ = {
+			isa = PBXGroup;
+			children = (
+				DCDB9455277EF83600AD2864 /* SimpleTableViewCellViewModelTests.swift */,
+			);
+			path = CommonLogics;
+			sourceTree = "<group>";
+		};
+		DCDB94A6277FA4CE00AD2864 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				DCDB94A2277FA40B00AD2864 /* MockServiceLauncher.swift */,
+			);
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -280,9 +368,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCDB948F277F63B800AD2864 /* Dependencies.swift in Sources */,
 				DCDB9480277F450500AD2864 /* ServiceRouter.swift in Sources */,
 				DCDB9471277F0E7600AD2864 /* ManufactureListCoordinator.swift in Sources */,
 				DCDB9473277F107300AD2864 /* ManufactureListViewModel.swift in Sources */,
+				DCDB9494277F9ACC00AD2864 /* UIViewControllerExtensions.swift in Sources */,
+				DCDB949D277FA2BE00AD2864 /* BaseViewModel.swift in Sources */,
 				DCDB9488277F4F2300AD2864 /* SimpleTableViewCell.swift in Sources */,
 				DCDB948C277F556200AD2864 /* ServiceLauncher.swift in Sources */,
 				DCDB9485277F45FA00AD2864 /* ManufactureService.swift in Sources */,
@@ -290,7 +381,9 @@
 				DCDB943F277EF83300AD2864 /* AppDelegate.swift in Sources */,
 				DCDB9476277F11B800AD2864 /* RootCoordinator.swift in Sources */,
 				DCDB9483277F45F000AD2864 /* ManufactureModel.swift in Sources */,
+				DCDB9492277F955C00AD2864 /* TableViewExtensions.swift in Sources */,
 				DCDB9478277F11CA00AD2864 /* Coordinator.swift in Sources */,
+				DCDB9499277FA0B300AD2864 /* UIViewExtensions.swift in Sources */,
 				DCDB948A277F4FAC00AD2864 /* SimpleTableViewCellViewModel.swift in Sources */,
 				DCDB9441277EF83300AD2864 /* SceneDelegate.swift in Sources */,
 			);
@@ -300,7 +393,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCDB9497277F9C1E00AD2864 /* ServiceRouterTests.swift in Sources */,
+				DCDB949F277FA31C00AD2864 /* ManufactureViewModelTest.swift in Sources */,
 				DCDB9456277EF83600AD2864 /* SimpleTableViewCellViewModelTests.swift in Sources */,
+				DCDB94A3277FA40B00AD2864 /* MockServiceLauncher.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

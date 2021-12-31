@@ -19,7 +19,7 @@ struct ManufactureListCoordinator: Coordinator {
     func start() {
         let manufacturerListVC = ManufacturerListVC()
         manufacturerListVC.coordinator = self
-        manufacturerListVC.viewModel = ManufactureListViewModel()
+        manufacturerListVC.viewModel = ManufactureListViewModel(serviceLauncher: Dependencies.networkServiceLauncher)
         navigationController.pushViewController(manufacturerListVC, animated: false)
     }
     

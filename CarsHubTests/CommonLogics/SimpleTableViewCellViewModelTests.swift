@@ -13,16 +13,13 @@ class SimpleTableViewCellViewModelTests: XCTestCase {
     var sut: SimpleTableViewCellViewModel!
 
     func testIsOdd() throws {
-        sut = SimpleTableViewCellViewModel(index: 0)
-        XCTAssertTrue(sut.isEven)
-        XCTAssertFalse(sut.isEven)
-        
-        sut = SimpleTableViewCellViewModel(index: 1)
-        XCTAssertFalse(sut.isEven)
+        sut = SimpleTableViewCellViewModel(index: 0, title: "")
         XCTAssertTrue(sut.isEven)
         
-        sut = SimpleTableViewCellViewModel(index: 323)
+        sut = SimpleTableViewCellViewModel(index: 1, title: "")
         XCTAssertFalse(sut.isEven)
-        XCTAssertTrue(sut.isEven)
+        
+        sut = SimpleTableViewCellViewModel(index: 323, title: "")
+        XCTAssertFalse(sut.isEven)
     }
 }

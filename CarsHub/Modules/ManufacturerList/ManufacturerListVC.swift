@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Combine
 
 class ManufacturerListVC: UIViewController {
     
@@ -13,12 +14,17 @@ class ManufacturerListVC: UIViewController {
     var viewModel: ManufactureListViewModel!
     
     private var tableView: UITableView!
+    private var disposeBag = Set<AnyCancellable>()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupVC()
         setupTableView()
+        
+        subscribe()
+        
+        viewModel.loadNextPage()
     }
     
     func setupVC() {
@@ -28,20 +34,32 @@ class ManufacturerListVC: UIViewController {
     func setupTableView() {
         
         tableView = UITableView()
-        tableView.translatesAutoresizingMaskIntoConstraints = false
+        tableView.register(SimpleTableViewCell.self, forCellReuseIdentifier: "cell")
         tableView.dataSource = self
         tableView.delegate = self
         
-        view.addSubview(tableView)
-        
-        NSLayoutConstraint.activate([
-            tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            tableView.topAnchor.constraint(equalTo: view.topAnchor),
-            tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
-        ])
-        
-        tableView.register(SimpleTableViewCell.self, forCellReuseIdentifier: "cell")
+        tableView.installFullSizeOn(parent: view)
+    }
+    
+    func subscribe() {
+        viewModel.itemsState.sink { completion in
+        } receiveValue: { [weak self] state in
+            switch state {
+            case .idle:
+                break
+            case .gotLastPage:
+                self?.tableView.showLoading(isLoading: false)
+                self?.tableView.reloadData()
+            case .gotNewPage:
+                self?.tableView.showLoading(isLoading: false)
+                self?.tableView.reloadData()
+            case .loading:
+                self?.tableView.showLoading(isLoading: true)
+            case .error:
+                self?.tableView.showLoading(isLoading: false)
+                self?.showSimpleAlert(title: "Error", message: "Could not Load the page, try agin.")
+            }
+        }.store(in: &disposeBag)
     }
 }
 
@@ -54,7 +72,7 @@ extension ManufacturerListVC: UITableViewDelegate {
 
 extension ManufacturerListVC: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel.itemsTitle.count
+        return viewModel.items.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -67,5 +85,11 @@ extension ManufacturerListVC: UITableViewDataSource {
         cell.fillCell(cellViewModel: cellViewModel)
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if indexPath.row == viewModel.items.count - 1 {
+            viewModel.loadNextPage()
+        }
     }
 }

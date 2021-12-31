@@ -7,12 +7,16 @@
 
 import Foundation
 
-class ManufactureService: ServiceRouter {
-    static var method: HTTPMethod {
+struct ManufactureService: ServiceRouter {
+    
+    var pagination: ServicePagination?
+    var urlParams: [String : String]?
+    
+    var method: HTTPMethod {
         return .get
     }
     
-    static var path: String {
+    var path: String {
         return "v1/car-types/manufacturer"
     }
     
