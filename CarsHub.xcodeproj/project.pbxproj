@@ -9,11 +9,14 @@
 /* Begin PBXBuildFile section */
 		DCDB943F277EF83300AD2864 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDB943E277EF83300AD2864 /* AppDelegate.swift */; };
 		DCDB9441277EF83300AD2864 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDB9440277EF83300AD2864 /* SceneDelegate.swift */; };
-		DCDB9443277EF83300AD2864 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDB9442277EF83300AD2864 /* ViewController.swift */; };
-		DCDB9446277EF83300AD2864 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCDB9444277EF83300AD2864 /* Main.storyboard */; };
+		DCDB9443277EF83300AD2864 /* ManufacturerListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDB9442277EF83300AD2864 /* ManufacturerListVC.swift */; };
 		DCDB9448277EF83600AD2864 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DCDB9447277EF83600AD2864 /* Assets.xcassets */; };
 		DCDB944B277EF83600AD2864 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCDB9449277EF83600AD2864 /* LaunchScreen.storyboard */; };
 		DCDB9456277EF83600AD2864 /* CarsHubTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDB9455277EF83600AD2864 /* CarsHubTests.swift */; };
+		DCDB9471277F0E7600AD2864 /* ManufactureListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDB9470277F0E7600AD2864 /* ManufactureListCoordinator.swift */; };
+		DCDB9473277F107300AD2864 /* ManufactureListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDB9472277F107300AD2864 /* ManufactureListViewModel.swift */; };
+		DCDB9476277F11B800AD2864 /* RootCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDB9475277F11B800AD2864 /* RootCoordinator.swift */; };
+		DCDB9478277F11CA00AD2864 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDB9477277F11CA00AD2864 /* Coordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,13 +33,16 @@
 		DCDB943B277EF83300AD2864 /* CarsHub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarsHub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCDB943E277EF83300AD2864 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DCDB9440277EF83300AD2864 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		DCDB9442277EF83300AD2864 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		DCDB9445277EF83300AD2864 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DCDB9442277EF83300AD2864 /* ManufacturerListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManufacturerListVC.swift; sourceTree = "<group>"; };
 		DCDB9447277EF83600AD2864 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DCDB944A277EF83600AD2864 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DCDB944C277EF83600AD2864 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DCDB9451277EF83600AD2864 /* CarsHubTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CarsHubTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCDB9455277EF83600AD2864 /* CarsHubTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarsHubTests.swift; sourceTree = "<group>"; };
+		DCDB9470277F0E7600AD2864 /* ManufactureListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManufactureListCoordinator.swift; sourceTree = "<group>"; };
+		DCDB9472277F107300AD2864 /* ManufactureListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManufactureListViewModel.swift; sourceTree = "<group>"; };
+		DCDB9475277F11B800AD2864 /* RootCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootCoordinator.swift; sourceTree = "<group>"; };
+		DCDB9477277F11CA00AD2864 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,10 +84,8 @@
 		DCDB943D277EF83300AD2864 /* CarsHub */ = {
 			isa = PBXGroup;
 			children = (
-				DCDB943E277EF83300AD2864 /* AppDelegate.swift */,
-				DCDB9440277EF83300AD2864 /* SceneDelegate.swift */,
-				DCDB9442277EF83300AD2864 /* ViewController.swift */,
-				DCDB9444277EF83300AD2864 /* Main.storyboard */,
+				DCDB9474277F110A00AD2864 /* Core */,
+				DCDB946E277F0E0300AD2864 /* Modules */,
 				DCDB9447277EF83600AD2864 /* Assets.xcassets */,
 				DCDB9449277EF83600AD2864 /* LaunchScreen.storyboard */,
 				DCDB944C277EF83600AD2864 /* Info.plist */,
@@ -95,6 +99,43 @@
 				DCDB9455277EF83600AD2864 /* CarsHubTests.swift */,
 			);
 			path = CarsHubTests;
+			sourceTree = "<group>";
+		};
+		DCDB946E277F0E0300AD2864 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				DCDB946F277F0E0D00AD2864 /* ManufacturerList */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		DCDB946F277F0E0D00AD2864 /* ManufacturerList */ = {
+			isa = PBXGroup;
+			children = (
+				DCDB9442277EF83300AD2864 /* ManufacturerListVC.swift */,
+				DCDB9470277F0E7600AD2864 /* ManufactureListCoordinator.swift */,
+				DCDB9472277F107300AD2864 /* ManufactureListViewModel.swift */,
+			);
+			path = ManufacturerList;
+			sourceTree = "<group>";
+		};
+		DCDB9474277F110A00AD2864 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				DCDB9479277F11D700AD2864 /* Coordinator */,
+				DCDB943E277EF83300AD2864 /* AppDelegate.swift */,
+				DCDB9440277EF83300AD2864 /* SceneDelegate.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		DCDB9479277F11D700AD2864 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				DCDB9477277F11CA00AD2864 /* Coordinator.swift */,
+				DCDB9475277F11B800AD2864 /* RootCoordinator.swift */,
+			);
+			path = Coordinator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -180,7 +221,6 @@
 			files = (
 				DCDB944B277EF83600AD2864 /* LaunchScreen.storyboard in Resources */,
 				DCDB9448277EF83600AD2864 /* Assets.xcassets in Resources */,
-				DCDB9446277EF83300AD2864 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -198,8 +238,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DCDB9443277EF83300AD2864 /* ViewController.swift in Sources */,
+				DCDB9471277F0E7600AD2864 /* ManufactureListCoordinator.swift in Sources */,
+				DCDB9473277F107300AD2864 /* ManufactureListViewModel.swift in Sources */,
+				DCDB9443277EF83300AD2864 /* ManufacturerListVC.swift in Sources */,
 				DCDB943F277EF83300AD2864 /* AppDelegate.swift in Sources */,
+				DCDB9476277F11B800AD2864 /* RootCoordinator.swift in Sources */,
+				DCDB9478277F11CA00AD2864 /* Coordinator.swift in Sources */,
 				DCDB9441277EF83300AD2864 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -223,14 +267,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		DCDB9444277EF83300AD2864 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DCDB9445277EF83300AD2864 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		DCDB9449277EF83600AD2864 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -370,7 +406,6 @@
 				INFOPLIST_FILE = CarsHub/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -398,7 +433,6 @@
 				INFOPLIST_FILE = CarsHub/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
